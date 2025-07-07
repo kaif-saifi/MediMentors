@@ -1,0 +1,263 @@
+*{
+    margin: 0px;
+}
+.mainContainer{
+    display: flex;
+}
+.imagecontainer{
+   
+
+    background-image: url('https://liveassets.ca/wp-content/uploads/2022/07/4-Workplace-Wellness-Trends-in-2022-Live-Assets.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    padding: 34px;
+    width: 1400px;
+    height: 469px;
+    margin: 79px 0px 0px 16px
+}
+.textContainer{
+    
+    width: 783px;
+    height: 401px;
+    margin: 84px 0px 0px 20px;
+    padding: 29px 29px;
+}
+.navBar{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100px;
+    
+    font-size: 27px;
+    
+}
+.navBar a {
+    color: #6610f2;
+    
+}
+.navBar a  :hover{
+    color: #7546c2;
+}
+.navbar{
+    padding: 10px;
+    color: #87a4aa;
+    background-color: #e2d9f7;
+    height: 154px;
+}
+.card1{
+    
+    color: black;
+    width: 404px;
+    height: 384px;
+    padding: 13px;
+    align-items: center;
+    text-align: center;
+    padding: 31px 0px 0px 30px;
+    height: 447px;
+
+}
+.card1 h5{
+    position: relative;
+    top: 32px;
+}
+.card1 p{
+    position: relative;
+    top: 55px;
+}
+.card1 button{
+    position: relative;
+    top: 65px;
+}
+.card2{
+    
+    color: black;
+    width: 404px;
+    height: 384px;
+    padding: 13px;
+    align-items: center;
+    text-align: center;
+    padding: 31px 0px 0px 30px;
+    height: 447px;
+
+}
+.card2 h5{
+    position: relative;
+    top: 32px;
+}
+.card2 p{
+    position: relative;
+    top: 55px;
+}
+.card2 button{
+    position: relative;
+    top: 65px;
+}
+.cards{
+    display: flex;
+    margin: 72px;
+
+}
+.heading{
+  
+    width: 405px;
+    font-size: 87px
+}
+.bigcard1{
+    color: black;
+    width: 952px;
+    margin: 0px 13px 15px 38px;
+}
+.bigcard2{
+    color: black;
+    width: 952px;
+    margin: 0px 13px 15px 10px;
+}
+.level1{
+    display: flex;
+}
+.level2{
+    display: flex;
+}
+.smallcards1{
+    color: black;
+}
+.smallcards2{
+    color: black;
+    margin: 0px 0px 0px 35px
+}
+
+.smallcard1{
+    color: black;
+    width: 400px;
+
+}
+.smallcard3{
+    color: black;
+    width: 400px;
+    margin: 0px 13px 15px 38px;
+
+}
+.smallcard2{
+    color: black;
+    width: 400px;
+    margin: 0px 0px 0px 32px;
+}
+.smallcard4{
+    color: black;
+    width: 400px;
+    margin: 0px 13px 15px 38px;
+}
+.sm{
+    margin: 1px 15px 43px 0px;
+    width: 438px;
+}
+.multicards{
+    text-align: center;
+}
+.logo{
+   
+    height: 106px;
+    width: 128px;
+    height: 147px;
+    width: 159px;
+    border-radius: 123px;
+}
+
+.navbar{
+    background-color: #f1ebf4;
+}
+.contact{
+    text-align: center;
+    background-image: url('https://media.istockphoto.com/id/1342018576/photo/blue-talk-bubbles.webp?b=1&s=170667a&w=0&k=20&c=IeZry5PEuy2Tle2lvgWuVYEzHqbpezgBVCpAJLvOwwY=');
+background-repeat: no-repeat;
+background-size: 100% 100%;
+padding: 100px;
+}
+.contact h1{
+    text-align: center;
+    font-size: 40px;
+    padding: 20px;
+    font-family: cursive;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.form input{
+    width: 400px;
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+    font-size: 15px;
+    border: 1px solid grey;
+    border-radius: 6px;
+    color: grey;
+    box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    font-family: cursive;
+}
+.form input[type='submit']{
+    width:200px ;
+    color: black;
+
+}
+.contact_button{
+    border: 1px;
+    background-color: #5894c5;
+    border-radius: 10px;
+    color: white;
+    height: 40px;
+    width: 100px;
+    color: white;
+    box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.contact_button:hover{
+    opacity: 0.8;
+}
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    color: black;
+    transition: 'all 4s ease-in';
+   
+  }
+  .fa:hover{
+    border: 0.1px solid black;
+    color: rgb(12, 9, 9);
+    box-shadow: 0 12px 14px 0 rgba(0, 0, 0, 0.2), 0 12px 30px 0 rgba(0, 0, 0, 0.19);
+  }
+  .footer{
+    text-align: center;
+    background-color: #75b9ea;
+    color: rgb(80, 73, 73);
+  }
+  .message{
+    color: black;
+    font-family: cursive;
+    font-size: 20px;
+  }
+  .links{
+    display: flex;
+    align-items: center;
+    justify-content: center
+  }
+  .links a{
+    width: 96px;
+    height: 71px;
+    font-size: 24px;
+    border-radius: 50%;
+  }
+  .fade-in-image { animation: fadeIn 7s; }
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  

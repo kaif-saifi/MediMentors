@@ -1,0 +1,17 @@
+*{
+    overflow-x: hidden;
+}
+.subform{
+    margin: 3px 328px;
+    padding: 51px;
+   
+    border-radius: 66px;
+
+}
+.forms{
+    background-color: pink;
+    background-image: url('https://media.istockphoto.com/id/1065043970/photo/young-woman-sitting-on-edge-looks-out-at-view.jpg?s=612x612&w=0&k=20&c=zXlF6EJwCHDAtEJ_kh8zs6PqliCKZA75F93ffAkJURY=');
+background-repeat: no-repeat;
+background-size: 100% 100%;
+height: 696px;
+}

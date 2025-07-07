@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basic Information</title>
+</head>
+<style>
+  
+  .container {
+  
+    background-image: url('https://media.istockphoto.com/id/1190433936/photo/soft-abstract-gradient-background-abstract-dandelion.jpg?s=612x612&w=0&k=20&c=dFKhyZyGXw2i37dWOUQaSQ7Li_iO1-XvqvBB_hJ9VJ0=');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+
+  form {
+    display: flex;
+    margin: auto;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    margin-top: 80px;
+    margin-bottom: 65px;
+  }
+
+  h1 {
+    text-align: center;
+    margin: 20px;
+    padding-top: 112px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  h2 {
+    text-align: center;
+    margin: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(196 81 228);
+  }
+
+  input {
+    margin: 10px;
+    padding: 20px;
+    width: 46%;
+    border-radius: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 15px;
+    text-align: center;
+  }
+
+  button {
+    height: 60px;
+    width: 140px;
+    border-radius: 10px;
+    background-color: rgb(196 81 228);
+    border: 1px solid rgb(126, 31, 152);
+    color: azure;
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+  }
+
+  .gallery {
+    
+    margin: 30px;
+    position: relative;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .images {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .image {
+    height: 300px;
+    width: 300px;
+    margin: 10px;
+    
+   
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+</style>
+
+<body>
+  <div class="container">
+    <div class="form">
+      <h1>Enter Basic Details</h1>
+      <form action="#">
+        <input type="text" id="pname" name="pname" placeholder="Enter your name ">
+        <input type="text" id=" page" name="page" placeholder="Enter your age">
+        <input type="text" id="duration" name="duration"
+          placeholder="Enter the time duration from you are suffering with">
+        <input type="text" id="history" name="history"
+          placeholder="Enter yes if you have any medical history regarding it .">
+        <input type="text" id="text_area" name="text-area" placeholder="Describe your problem briefly">
+        <button id="btn" onclick="show();return false">Submit</button>
+      </form>
+    </div>
+
+    <div class="gallery">
+      <h1 id="head"></h1>
+      <h2 id="head2"></h2>
+      <div class="images">
+        <div class="row1">
+          <div class="image" id="image1"></div>
+          <p id="para1"></p>
+          <div class="image" id="image2"></div>
+          <p id="para2"></p>
+        </div>
+        <div class="row2">
+          <div class="image" id="image3"></div>
+          <p id="para3"></p>
+          <div class="image" id="image4"></div>
+          <p id="para4"></p>
+          
+        </div>
+        <div class="row3"><video style="height: 100px; width: 100px;" class="videos"src=""></video></div>
+        <h2 id="hed2"></h2>
+      </div>
+    </div>
+  </div>
+  <script>
+
+    function show() {
+      const name = document.getElementById('pname').value
+      const btn = document.getElementById('btn')
+      const h = document.getElementById("head")
+      const hed=document.getElementById('head2')
+      const wish=document.getElementById('hed2')
+      const dis = document.getElementById("text_area").value
+      const vid = document.getElementsByClassName('videos')
+      h.style.color='rgb(167 11 211)';
+      h.innerText = "Hi " + name;
+      hed.innerText=
+"We advise you to do the following exercises for the specified duration over the next few days"
+      const img1 = document.getElementById('image1')
+      const img2 = document.getElementById('image2')
+      const img3 = document.getElementById('image3')
+      const img4 = document.getElementById('image4')
+      const p1 = document.getElementById('para1')
+      const p2 = document.getElementById('para2')
+      const p3 = document.getElementById('para3')
+      const p4 = document.getElementById('para4')
+      img1.style.border="0px solid black";
+      img1.style.boxShadow='1px 1px 8px 1px purple';
+      img2.style.border="0px solid black";
+      img2.style.boxShadow='1px 1px 8px 1px purple';
+      img3.style.border="0px solid black";
+      img3.style.boxShadow='1px 1px 8px 1px purple';
+      img4.style.border="0px solid black";
+      img4.style.boxShadow='1px 1px 8px 1px purple';
+
+      const exName = ["Meditation", "Surya Namaskar", "Setu Bandha Sarvangasana", "Adho Mukha Svanasana", "Pranayama", "Kapalbhati", "walking", "Swimming", "cycling", "sleeping", "Neck Rotation", "Streaching"]
+      const imageArray = ["https://media.istockphoto.com/id/1219401141/photo/woman-practicing-yoga-in-lotus-position-at-park.webp?a=1&b=1&s=612x612&w=0&k=20&c=ZizQtvNJhqZ73gA6sRvr99t5w3fWHT0_XXdAkEbjr2Q=",
+        "https://images.unsplash.com/photo-1447452001602-7090c7ab2db3?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8eW9nYXxlbnwwfHwwfHx8MA%3D%3D",
+        "https://media.istockphoto.com/id/945925934/photo/young-woman-practicing-yoga-in-a-fitness-studio-setu-bandha-sarvangasana.webp?a=1&b=1&s=612x612&w=0&k=20&c=-xqdnTJ0Yw-QaeTYuXWw5ZzCBpRNNYSE5jPdKOZGrak=",
+        "https://media.istockphoto.com/id/924163392/photo/young-woman-doing-downward-facing-dog-exercise.webp?a=1&b=1&s=612x612&w=0&k=20&c=cAsYOFTuUz6wsnVqpEbdVj6WxkWyMjWY8RGQ-wcrTNU=",
+        "https://media.istockphoto.com/id/1311821091/photo/young-woman-doing-yoga-and-exercise-at-park.webp?a=1&b=1&s=612x612&w=0&k=20&c=xLBGHStnLB7WzIVRu_50CBYiK8N0_sI2dqXpEkRY-9c=",
+        "https://media.istockphoto.com/id/1404822920/photo/nadi-shodhana-pranayama-alternate-nostril-breathing-kapalabhati.jpg?s=612x612&w=0&k=20&c=k1xzpGsDQa63sWyqIMuP1IUJZf6369vhbuEejsygNkM=",
+        "https://media.istockphoto.com/id/1357012119/photo/woman-listening-music-while-walking-at-park.webp?a=1&b=1&s=612x612&w=0&k=20&c=lmdkdqPoe2rX4pHZkbNApGJSwLRkR_RecXdLh8vlQrk=",
+        "https://media.istockphoto.com/id/125145097/photo/female-swimmer-at-butterfly-stroke-in-the-sea.webp?a=1&b=1&s=612x612&w=0&k=20&c=q2Q_nVlYMhYKEwgn4ePN71dEq1Lgl37hOow5bl_c5FE=",
+        "https://media.istockphoto.com/id/1321477818/photo/portrait-of-a-fit-indian-female-cyclist-out-of-a-training-ride-on-her-bicycle.webp?a=1&b=1&s=612x612&w=0&k=20&c=ZDZO5rXro5HfgPWvh1yovFtmMHAZtoyT3uEsbCjI1AA=",
+        "https://media.istockphoto.com/id/1212158838/photo/woman-sleeping-in-bed-hugging-soft-white-pillow.webp?a=1&b=1&s=612x612&w=0&k=20&c=sneBCxjdRwSwvedJT-qDVKH1qTdZcs5EN00P6YBrFxw=",
+        "https://media.istockphoto.com/id/1479338951/photo/athlete-and-fitness.webp?a=1&b=1&s=612x612&w=0&k=20&c=WytSpVf7T_YozYr-CLifXjEXoFYO1dKlyJqVvShDYl0=",
+        "https://images.unsplash.com/photo-1485727749690-d091e8284ef3?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8ZXhjZXJjaXNlfGVufDB8fDB8fHww"
+
+
+
+
+
+      ]
+      //img1.style. backgroundImage = `url(${imageArray[0]})`;
+      if (dis == "anxity"||dis=="Anxity" || dis == " depression"||dis == "Depression") {
+        img1.style.backgroundImage = `url(${imageArray[0]})`;
+        p1.innerText = exName[0] + "  " + "  Duration : 10 min"
+        img2.style.backgroundImage = `url(${imageArray[6]})`;
+        p2.innerText = exName[6] + "  " + "  Duration : 10 min"
+        img3.style.backgroundImage = `url(${imageArray[7]})`;
+        p3.innerText = `${exName[7]} Duration : 10 min`
+        img4.style.backgroundImage = `url(${imageArray[8]})`;
+        p4.innerText = `${exName[8]} Duration : 15 min`
+        vid.setAttribute('src','')
+      }
+      if (dis == "neck pain" ||"Neck pain") {
+        img1.style.backgroundImage = `url(${imageArray[11]})`;
+        p1.innerText = exName[11] + "  " + "  Duration : 10 min"
+        img2.style.backgroundImage = `url(${imageArray[10]})`;
+        p2.innerText = exName[10] + "  " + "  Duration : 10 min"
+        img3.style.backgroundImage = `url(${imageArray[1]})`;
+        p3.innerText = `${exName[1]} Duration : 10 min`
+        img4.style.backgroundImage = `url(${imageArray[8]})`;
+        p4.innerText = `${exName[8]} Duration : 15 min`
+      }
+      if (dis == "back pain") {
+        img1.style.backgroundImage = `url(${imageArray[3]})`;
+        p1.innerText = exName[3] + "  " + "  Duration : 10 min"
+        img2.style.backgroundImage = `url(${imageArray[2]})`;
+        p2.innerText = exName[2] + "  " + "  Duration : 10 min"
+        img3.style.backgroundImage = `url(${imageArray[4]})`;
+        p3.innerText = `${exName[4]} Duration : 10 min`
+        img4.style.backgroundImage = `url(${imageArray[12]})`;
+        p4.innerText = `${exName[12]} Duration : 15 min`
+      }
+      if (dis == "sleeplessness") {
+
+        img1.style.backgroundImage = `url(${imageArray[0]})`;
+        p1.innerText = exName[0] + "  " + "  Duration : 10 min"
+        img2.style.backgroundImage = `url(${imageArray[1]})`;
+        p2.innerText = exName[1] + "  " + "  Duration : 10 min"
+        img3.style.backgroundImage = `url(${imageArray[4]})`;
+        p3.innerText = `${exName[4]} Duration : 10 min`
+        img4.style.backgroundImage = `url(${imageArray[9]})`;
+        p4.innerText = `${exName[9]} Duration : 7-8 hours`
+
+      }
+      if (dis == "disturbed") {
+
+        img1.style.backgroundImage = `url(${imageArray[9]})`;
+        p1.innerText = exName[9] + "  " + "  Duration : 7-8 hours"
+        img2.style.backgroundImage = `url(${imageArray[0]})`;
+        p2.innerText = exName[0] + "  " + "  Duration : 10 min"
+        img3.style.backgroundImage = `url(${imageArray[10]})`;
+        p3.innerText = `${exName[10]} Duration : 10 min`
+        img4.style.backgroundImage = `url(${imageArray[1]})`;
+        p4.innerText = `${exName[1]} Duration : 15 min`
+
+      }
+       wish.innerHTML="We pray for your good health."
+      
+
+    }
+
+  </script>
+</body>
+
+</html>
