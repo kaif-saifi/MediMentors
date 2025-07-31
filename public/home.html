@@ -8,286 +8,687 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="/public/home.css">
+    <link rel="stylesheet" href="/Cards.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=fire">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
 <style>
-*{
-    margin: 0px;
-}
-.mainContainer{
-    display: flex;
-}
-.imagecontainer{
-   
+    * {
+        margin: 0px;
+    }
 
-    background-image: url('https://liveassets.ca/wp-content/uploads/2022/07/4-Workplace-Wellness-Trends-in-2022-Live-Assets.jpg');
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    display: flex;
-    padding: 34px;
-    width: 1400px;
-    height: 469px;
-    margin: 79px 0px 0px 16px
-}
-.textContainer{
-    
-    width: 783px;
-    height: 401px;
-    margin: 84px 0px 0px 20px;
-    padding: 29px 29px;
-}
-.navBar{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100px;
-    
-    font-size: 27px;
-    
-}
-.navBar a {
-    color: #6610f2;
-    
-}
-.navBar a  :hover{
-    color: #7546c2;
-}
-.navbar{
-    padding: 10px;
-    color: #87a4aa;
-    background-color: #e2d9f7;
-    height: 174px;
-}
-.card1{
-    
-    color: black;
-    width: 404px;
-    height: 384px;
-    padding: 13px;
-    align-items: center;
-    text-align: center;
-    padding: 31px 0px 0px 30px;
-    height: 447px;
+    .mainContainer {
+        display: flex;
+    }
 
-}
-.card1 h5{
-    position: relative;
-    top: 32px;
-}
-.card1 p{
-    position: relative;
-    top: 55px;
-}
-.card1 button{
-    position: relative;
-    top: 65px;
-}
-.card2{
-    
-    color: black;
-    width: 404px;
-    height: 384px;
-    padding: 13px;
-    align-items: center;
-    text-align: center;
-    padding: 31px 0px 0px 30px;
-    height: 447px;
-
-}
-.card2 h5{
-    position: relative;
-    top: 32px;
-}
-.card2 p{
-    position: relative;
-    top: 55px;
-}
-.card2 button{
-    position: relative;
-    top: 65px;
-}
-.cards{
-    display: flex;
-    margin: 72px;
-
-}
-.heading{
-  
-    width: 405px;
-    font-size: 87px
-}
-.bigcard1{
-    color: black;
-    width: 952px;
-    margin: 0px 13px 15px 38px;
-}
-.bigcard2{
-    color: black;
-    width: 952px;
-    margin: 0px 13px 15px 10px;
-}
-.level1{
-    display: flex;
-}
-.level2{
-    display: flex;
-}
-.smallcards1{
-    color: black;
-}
-.smallcards2{
-    color: black;
-    margin: 0px 0px 0px 35px
-}
-
-.smallcard1{
-    color: black;
-    width: 400px;
-
-}
-.smallcard3{
-    color: black;
-    width: 400px;
-    margin: 0px 13px 15px 38px;
-
-}
-.smallcard2{
-    color: black;
-    width: 400px;
-    margin: 0px 0px 0px 32px;
-}
-.smallcard4{
-    color: black;
-    width: 400px;
-    margin: 0px 13px 15px 38px;
-}
-.sm{
-    margin: 1px 15px 43px 0px;
-    width: 438px;
-}
-.multicards{
-    text-align: center;
-}
-.logo{
-   
-    height: 106px;
-    width: 128px;
-    height: 147px;
-    width: 159px;
-    border-radius: 123px;
-}
-
-.navbar{
-    background-color: #f1ebf4;
-}
-.contact{
-    text-align: center;
-    background-image: url('https://media.istockphoto.com/id/1342018576/photo/blue-talk-bubbles.webp?b=1&s=170667a&w=0&k=20&c=IeZry5PEuy2Tle2lvgWuVYEzHqbpezgBVCpAJLvOwwY=');
-background-repeat: no-repeat;
-background-size: 100% 100%;
-padding: 100px;
-}
-.contact h1{
-    text-align: center;
-    font-size: 40px;
-    padding: 20px;
-    font-family: cursive;
-}
-.form{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.form input{
-    width: 400px;
-    text-align: center;
-    margin: 10px;
-    padding: 10px;
-    font-size: 15px;
-    border: 1px solid grey;
-    border-radius: 6px;
-    color: grey;
-    box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    font-family: cursive;
-}
-.form input[type='submit']{
-    width:200px ;
-    color: black;
-
-}
-.contact_button{
-    border: 1px;
-    background-color: #5894c5;
-    border-radius: 10px;
-    color: white;
-    height: 40px;
-    width: 100px;
-    color: white;
-    box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-.contact_button:hover{
-    opacity: 0.8;
-}
-.fa {
-    padding: 20px;
-    font-size: 30px;
-    width: 50px;
-    text-align: center;
-    text-decoration: none;
-    margin: 5px 2px;
-    box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    color: black;
-    transition: 'all 4s ease-in';
-   
-  }
-  .fa:hover{
-    border: 0.1px solid black;
-    color: rgb(12, 9, 9);
-    box-shadow: 0 12px 14px 0 rgba(0, 0, 0, 0.2), 0 12px 30px 0 rgba(0, 0, 0, 0.19);
-  }
-  .footer{
-    text-align: center;
-    background-color: #75b9ea;
-    color: rgb(80, 73, 73);
-  }
-  .message{
-    color: black;
-    font-family: cursive;
-    font-size: 20px;
-  }
-  .links{
-    display: flex;
-    align-items: center;
-    justify-content: center
-  }
-  .links a{
-    width: 96px;
-    height: 71px;
-    font-size: 24px;
-    border-radius: 50%;
-  }
-  .fade-in-image { animation: fadeIn 7s; }
-  @keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-  }
-  .logo{
-    height:147px;
-width: 159px;
-background:url('https://www.canva.com/design/DAGW8UEk-c8/v4QYanWXOBDJEHjWyWUgVA/view');
-position: relative;
-bottom: 6px;
-}
-  
-  
+    .imagecontainer {
 
 
+        background-image: url('https://liveassets.ca/wp-content/uploads/2022/07/4-Workplace-Wellness-Trends-in-2022-Live-Assets.jpg');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        display: flex;
+        padding: 34px;
+        width: 1400px;
+        height: 469px;
+        margin: 79px 0px 0px 16px
+    }
+
+    .textContainer {
+
+        width: 783px;
+        height: 401px;
+        margin: 84px 0px 0px 20px;
+        padding: 29px 29px;
+    }
+
+    .navBar {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100px;
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 27px;
+
+    }
+
+    .navBar a {
+        color: #6610f2;
+        margin: 15px;
+
+    }
+
+    .navBar a :hover {
+        color: #7546c2;
+    }
+
+    .navbar {
+        padding: 10px;
+        color: #87a4aa;
+        background-color: #e2d9f7;
+        height: 174px;
+    }
+
+    .card1 {
+
+        color: black;
+        width: 404px;
+        height: 384px;
+        padding: 13px;
+        align-items: center;
+        text-align: center;
+        padding: 31px 0px 0px 30px;
+        height: 447px;
+       
+    }
+
+    .card1 h5 {
+        position: relative;
+        top: 32px;
+    }
+
+    .card1 p {
+        position: relative;
+        top: 55px;
+    }
+
+    .card1 button {
+        position: relative;
+        top: 65px;
+    }
+
+    .card2 {
+
+        color: black;
+        width: 404px;
+        height: 384px;
+        padding: 13px;
+        align-items: center;
+        text-align: center;
+        padding: 31px 0px 0px 30px;
+        height: 447px;
+
+    }
+
+    .card2 h5 {
+        position: relative;
+        top: 32px;
+    }
+
+    .card2 p {
+        position: relative;
+        top: 55px;
+    }
+
+    .card2 button {
+        position: relative;
+        top: 65px;
+    }
+
+    .cards {
+        display: flex;
+        margin: 72px;
+
+    }
+
+    .heading {
+
+        width: 405px;
+        font-size: 87px
+    }
+
+    .bigcard1 {
+        color: black;
+        width: 952px;
+        margin: 0px 13px 15px 38px;
+    }
+
+    .bigcard2 {
+        color: black;
+        width: 952px;
+        margin: 0px 13px 15px 10px;
+    }
+
+    .level1 {
+        display: flex;
+    }
+
+    .level2 {
+        display: flex;
+    }
+
+    .smallcards1 {
+        color: black;
+
+    }
+
+    .smallcards2 {
+        color: black;
+        margin: 0px 0px 0px 35px
+    }
+
+    .smallcard1 {
+        color: black;
+        width: 400px;
+
+    }
+
+    .smallcard3 {
+        color: black;
+        width: 400px;
+        margin: 0px 13px 15px 38px;
+
+    }
+
+    .smallcard2 {
+        color: black;
+        width: 400px;
+        margin: 0px 0px 0px 32px;
+    }
+
+    .smallcard4 {
+        color: black;
+        width: 400px;
+        margin: 0px 13px 15px 38px;
+    }
+
+    .sm {
+        margin: 1px 15px 43px 0px;
+        width: 438px;
+    }
+
+    .multicards {
+        text-align: center;
+    }
+
+    .logo {
+
+        height: 106px;
+        width: 128px;
+        height: 147px;
+        width: 159px;
+        border-radius: 123px;
+    }
+
+    .navbar {
+        background-color: #f1ebf4;
+    }
+
+    .contact {
+        text-align: center;
+        background-image: url('https://media.istockphoto.com/id/1342018576/photo/blue-talk-bubbles.webp?b=1&s=170667a&w=0&k=20&c=IeZry5PEuy2Tle2lvgWuVYEzHqbpezgBVCpAJLvOwwY=');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        padding: 100px;
+    }
+
+    .contact h1 {
+        text-align: center;
+        font-size: 40px;
+        padding: 20px;
+        font-family: cursive;
+    }
+
+    .form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .form input {
+        width: 400px;
+        text-align: center;
+        margin: 10px;
+        padding: 10px;
+        font-size: 15px;
+        border: 1px solid grey;
+        border-radius: 6px;
+        color: grey;
+        box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        font-family: cursive;
+    }
+
+    .form input[type='submit'] {
+        width: 200px;
+        color: black;
+
+    }
+
+    .contact_button {
+        border: 1px;
+        background-color: #5894c5;
+        border-radius: 10px;
+        color: white;
+        height: 40px;
+        width: 100px;
+        color: white;
+        box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    .contact_button:hover {
+        opacity: 0.8;
+    }
+
+    .fa {
+        padding: 20px;
+        font-size: 30px;
+        width: 50px;
+        text-align: center;
+        text-decoration: none;
+        margin: 5px 2px;
+        box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        color: black;
+        transition: 'all 4s ease-in';
+
+    }
+
+    .fa:hover {
+        border: 0.1px solid black;
+        color: rgb(12, 9, 9);
+        box-shadow: 0 12px 14px 0 rgba(0, 0, 0, 0.2), 0 12px 30px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    .footer {
+        text-align: center;
+        background-color: #75b9ea;
+        color: rgb(80, 73, 73);
+    }
+
+    .message {
+        color: black;
+        font-family: cursive;
+        font-size: 20px;
+    }
+
+    .links {
+        display: flex;
+        align-items: center;
+        justify-content: center
+    }
+
+    .links a {
+        width: 96px;
+        height: 71px;
+        font-size: 24px;
+        border-radius: 50%;
+    }
+
+    .fade-in-image {
+        animation: fadeIn 7s;
+    }
+
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    .logo {
+        height: 147px;
+        width: 159px;
+        background: url('https://www.canva.com/design/DAGW8UEk-c8/v4QYanWXOBDJEHjWyWUgVA/view');
+        position: relative;
+        bottom: 6px;
+    }
+
+    #myProfile {
+        position: relative;
+        left: 513px;
+    }
+
+    #logoutButton {
+
+        border: 2px;
+        border-radius: 7px;
+        font-size: 40px;
+        height: 51px;
+        width: 150px;
+        background: #9065e9;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        color: white;
+        text-decoration: none;
+        font-size: 14px;
+        position: relative;
+        top: -7px
+    }
+
+    #profile {
+        height: 50px;
+        width: 50px;
+        border: 2px solid black;
+        border-radius: 50%;
+        position: relative;
+        left: 13px;
+        padding: 36px;
+        bottom: 10px;
+    }
+
+    #profile img {
+        height: 50px;
+        width: 50px;
+        padding: 36px;
+    }
+
+    #logoutButton a {
+        color: white;
+        text-decoration: none;
+        font-size: 20px;
+    }
+
+    .button-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+
+    .btnSmall {
+        padding: 12px 20px;
+        background: linear-gradient(135deg, #9065e9, #2a256b);
+        background: linear-gradient(135deg, #b196e9, #473bf0);
+
+        color: white;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .btnSmall:hover {
+        transform: scale(1.05);
+        background: linear-gradient(135deg, #4caf50, #009688);
+        background: linear-gradient(135deg, #b196e9, #473bf0);
+        background: linear-gradient(135deg, #9065e9, #2a256b);
+    }
+
+    .card-container {
+        display: none;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        justify-content: center;
+        animation: fadeIn 0.6s ease;
+        height: 327px;
+        position: relative;
+        top: 10px;
+        left: 10px;
+        right: 10px;
+        margin-left: 29px;
+        margin-right: 61px
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .card-ssmall {
+        background: #ffffff;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 220px;
+        width: 319px;
+        text-align: center;
+        border: 2px solid  hsl(263, 87%, 66%);
+    }
+
+    .card-ssmall:hover {
+        transform: scale(1.05);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+       
+    }
 
 
+    .card-ssmall h3 {
+        color: #5409cb;
+        margin-bottom: 10px;
+    }
 
+    .card-ssmall p {
+        flex-grow: 1;
+    }
+
+    .suffering-section {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        gap: 30px;
+        padding: 60px 10%;
+        flex-wrap: wrap;
+        position: relative;
+        top: 10px;
+        margin-bottom: 100px;
+    }
+
+    .heading h1 {
+        font-size: 3.5rem;
+        line-height: 1.2;
+        font-weight: 700;
+        color: #111;
+    }
+
+    .heading h1 span {
+        color: #008cba;
+        color: #965bf4;
+        position: relative;
+    }
+
+    .heading h1 span::after {
+        content: '';
+        width: 100%;
+        height: 6px;
+        background: #008cba;
+        background: hsl(263, 87%, 66%);
+        position: absolute;
+        bottom: -8px;
+        left: 0;
+        border-radius: 5px;
+    }
+
+    .card-wrapper {
+        display: flex;
+        gap: 25px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .card-suffering {
+        width: 300px;
+        height: 400px;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+        position: relative;
+        background-size: cover;
+        background-position: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .card-suffering:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+    }
+
+    .card-suffering.physical {
+        background-image: url('https://media.istockphoto.com/id/526426883/photo/knee-pain-running-injury.jpg?s=612x612&w=0&k=20&c=8YzEZ-i0Hi6kGx_JbLLixad8IVoLgaAJVW1Rsy1v8NU=');
+    }
+
+    .card-suffering.mental {
+        background-image: url('https://cdn.brewersassociation.org/wp-content/uploads/2024/05/29100101/illustration-of-person-with-harmonious-mental-health-1200x800-1.jpg');
+    }
+
+    .card-overlay {
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+        height: 110%;
+        width: 110%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .card-overlay h2 {
+        font-size: 1.6rem;
+        margin-bottom: 10px;
+        color: #fff;
+    }
+
+    .card-overlay p {
+        font-size: 1rem;
+        margin-bottom: 20px;
+        color: #e0f7fa;
+    }
+
+    .start-btn {
+        background-color: #00c853;
+        border: none;
+        padding: 10px 24px;
+        border-radius: 25px;
+        font-size: 1rem;
+        color: white;
+        cursor: pointer;
+        transition: background 0.3s ease;
+    }
+
+    .start-btn:hover {
+        background-color: #009624;
+    }
+    /* 🌌 Stylish Footer Styling */
+.modern-footer {
+  background: linear-gradient(135deg, #121212, #1e3c72);
+  background: linear-gradient(135deg, #2c0f65, #6156ff);
+  color: #ccc;
+  padding: 50px 10% 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
+}
+
+.footer-box {
+  flex: 1 1 200px;
+  min-width: 200px;
+}
+
+.footer-box h2, .footer-box h3 {
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+.footer-box p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.footer-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-box ul li a {
+  color: #ccc;
+  text-decoration: none;
+  display: block;
+  margin: 8px 0;
+  transition: all 0.3s ease;
+}
+
+.footer-box ul li a:hover {
+  color: #00e5ff;
+  transform: translateX(5px);
+}
+
+.social-links a {
+  font-size: 1.3rem;
+  margin-right: 15px;
+  color: #ccc;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #00e676;
+  transform: scale(1.2);
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #444;
+  margin-top: 40px;
+  padding-top: 15px;
+  color: #aaa;
+  font-size: 0.85rem;
+}
+.swiper {
+      width: 85%;
+      padding: 40px 0;
+    }
+
+    .swiper-slide {
+      background-size: cover;
+      background-position: center;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      color: #66ff66;
+    }
+    .newCard{
+      
+        background: linear-gradient(135deg, #9065e9, #2a256b);
+        background: linear-gradient(135deg, #b196e9, #473bf0);
+
+        color: white;
+        border: none;
+        
+        cursor: pointer;
+        font-weight: bold;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
 </style>
+
 <body>
     <div class="navBar">
         <nav class="navbar navbar-expand-lg ">
@@ -296,11 +697,13 @@ bottom: 6px;
                     <div style="position: relative; width: 159px; height: 147px; padding-top: 100.0000%;
  padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16);  overflow: hidden;
  border-radius: 133px; will-change: transform;">
-  <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
-    src="https://www.canva.com/design/DAGW8UEk-c8/v4QYanWXOBDJEHjWyWUgVA/view?embed" >
-  </iframe>
-</div>
-<a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAGW8UEk-c8&#x2F;v4QYanWXOBDJEHjWyWUgVA&#x2F;view?utm_content=DAGW8UEk-c8&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener"></a> 
+                        <iframe loading="lazy"
+                            style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+                            src="https://www.canva.com/design/DAGW8UEk-c8/v4QYanWXOBDJEHjWyWUgVA/view?embed">
+                        </iframe>
+                    </div>
+                    <a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAGW8UEk-c8&#x2F;v4QYanWXOBDJEHjWyWUgVA&#x2F;view?utm_content=DAGW8UEk-c8&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link"
+                        target="_blank" rel="noopener"></a>
                 </div>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -309,17 +712,26 @@ bottom: 6px;
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link " style="color:#6610f2 ;" aria-current="page" href="#">Home</a>
+                            <a class="nav-link " id="Home" style="color:#6610f2 ;" aria-current="page" href="#">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">About Us</a>
+                            <a class="nav-link" href="#AboutUs">About Us</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Achievements</a>
+                            <a class="nav-link" href="#modern-footer">Contact Info</a>
                         </li>
-                        
+
 
                     </ul>
+                    <div id="myProfile">
+                        <!-- <div id="profile"><img
+                                src="https://www.shutterstock.com/image-vector/user-profile-icon-vector-avatar-600nw-2220431045.jpg"
+                                alt="Profile">
+                        </div> -->
+
+                        <button class="btnSmall" style="text-align: center;" id="logoutButton"><a
+                                style="text-align: center;" href="/logout">Log out</a></button>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -329,9 +741,13 @@ bottom: 6px;
             <h1> <strong>We Care about you!</strong></h1>
             <h3>We are Medimentors, we are here to help you with your mental health .</h3>
             <p><br> We will provide you the best meditation and yoga based solution for your mental helth.</p>
-            <a href="#"></a><button type="button" style="background-color: #723ce0; color: white;" class="btn  btn-lg">
+            <!-- <a href="#"></a><button type="button" style="background-color: #723ce0; color: white;" class="btn  btn-lg">
                 Know More</button></a>
             <a href="#"></a><button type="button" style="background-color:#9165e9 ; color: white;" class="btn  btn-lg">
+                Start</button></a> -->
+            <a href="#AboutUs"><button type="button" class="btnSmall  btn-lg">
+                Know More</button></a>
+            <a href="/start"><button type="button" class="btnSmall  btn-lg">
                 Start</button></a>
 
         </div>
@@ -339,9 +755,9 @@ bottom: 6px;
 
 
     </div>
-    <div class="cards">
+    <!-- <div class="cards">
         <h1 class="heading">What are you Suffering with?</h1>
-        <div class="card1">
+        <div class="card1 ">
             <div class="card text-bg-dark fade-in-image">
                 <img src="https://images.unsplash.com/photo-1530424707354-e45bc50829bd?w=294&dpr=2&h=294&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXRodW1ibmFpbHx8MjQ5OTExNzF8fGVufDB8fHx8fA%3D%3D"
                     class="card-img fade-in-image" alt="...">
@@ -373,113 +789,66 @@ bottom: 6px;
                 </div>
             </div>
         </div>
-    </div>
-    <div class="multicards">
-        <div class="level1">
-            <div class="bigcard1">
-                <div class="card text-bg-dark">
-                    <img src="https://media.istockphoto.com/id/1302627633/photo/young-woman-practicing-yoga-at-home-doing-childs-pose-blasana-on-a-mat.jpg?s=612x612&w=0&k=20&c=R_xFXZtxS64YyoLymUUiOm2PmCnZjeZAvAuSCL-FThU="
-                        class="fade-in-image card-img" alt="...">
-                    <div class="card-img-overlay">
-                        <h5 class="card-title" style="color: black;">Balasana</h5>
-                        <p class="card-text" style="color: black; padding: 20px;">Balasana, commonly known as Child's
-                            Pose, is a restful yoga posture that gently stretches the hips, thighs, and lower back. It's
-                            often used as a resting pose during yoga practice to calm the mind, relieve stress, and
-                            improve overall flexibility. The pose involves kneeling on the floor, sitting back on the
-                            heels, and bending forward to rest the forehead on the mat, with arms extended forward or
-                            alongside the body. Balasana is particularly beneficial for promoting relaxation and
-                            grounding during a yoga session.</p>
+    </div> -->
+    <section id="Yoga" class="suffering-section">
+        <div class="heading">
+            <h1>What are you<br><span>you Suffering</span><br>with?</h1>
+        </div>
 
-                    </div>
+        <div class="card-wrapper">
+            <div class="card-suffering mental">
+                <div class="card-overlay">
+                    <h2>Mental health</h2>
+                    <p> About 2M people are suffering with mental health issues nowadays. MediMentors can help you to improve your Mental health and live a happy life .</p>
+                        <button class="start-btn"><a href="/start" style="text-decoration: none; color: white;">Start</a></button>
                 </div>
             </div>
-            <div class="smallcards1">
-                <div class="smallcard1 sm">
-                    <div class="card text-bg-dark">
-                        <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHlvZ2F8ZW58MHx8MHx8fDA%3D"
-                            class="fade-in-image card-img" alt="...">
-                        <div class="card-img-overlay">
-                            <h5 class="card-title">Hastauttanasana</h5>
-                            <p class="card-text">Hasta Uttanasana, or the raised arms pose, is a standing backbend yoga
-                                pose that stretches the entire body. It's a funda- mental posture in the Sun Salutation
-                                series and is often practiced as the second or eleventh pose.</p>
 
-                        </div>
-                    </div>
-                </div>
-                <div class="smallcard2 sm">
-                    <div class="card text-bg-dark">
-                        <img src="https://media.istockphoto.com/id/1082879824/photo/fitness-asian-woman-doing-yoga-in-park.jpg?s=612x612&w=0&k=20&c=Xa0F5M-IeydvYxVS3emiRVnIYs0oio1LnFwApk1MpfE="
-                            class="fade-in-image card-img" alt="...">
-                        <div class="card-img-overlay">
-                            <h5 class="card-title">Bhujangasana</h5>
-                            <p class="card-text">Bhujangasana, also known as Cobra Pose, is a back-bending yoga pose
-                                that stretches the spine, chest, and abdomen while strengthening the back and arm
-                                muscles. It's often performed as part of the Surya Namaskar, or Salute to the Sun,
-                                sequence.</p>
-
-                        </div>
-                    </div>
+            <div class="card-suffering physical">
+                <div class="card-overlay">
+                    <h2>Physical Health</h2>
+                    <p>More than 1.5M people are suffering from physical health issues. Here's the solution to eliminate
+                        this problem from your life.</p>
+                        <button class="start-btn"><a href="/start" style="text-decoration: none; color: white;">Start</a></button>
                 </div>
             </div>
         </div>
-        <div class="level2">
-            <div class="smallcards2">
-                <div class="smallcard3 sm">
-                    <div class="card text-bg-dark">
-                        <img src="https://media.istockphoto.com/id/956403104/photo/focused-young-indian-man-meditating-in-lotus-pose.jpg?s=612x612&w=0&k=20&c=EX04zad2nVyYUDlnazeZV5ykU28rpLPSV5nqxsu8QdY="
-                            class="fade-in-image card-img" alt="...">
-                        <div class="card-img-overlay">
-                            <h5 class="card-title" style="color: black;">Sukhasana</h5>
-                            <p class="card-text" style="color: black;">Sukhasana, also known as the easy pose, is a yoga
-                                posture that involves sitting cross-legged with your spine straight and hands resting on
-                                your knees or in your lap. It's a fundamental pose that can help you relax and find
-                                inner peace</p>
+    </section>
 
-                        </div>
-                    </div>
-                </div>
-                <div class="smallcard4 sm">
-                    <div class="card text-bg-dark">
-                        <img src="https://media.istockphoto.com/id/639440342/photo/young-woman-in-nadi-shodhana-pranayam-pose-against-floor-window.jpg?s=612x612&w=0&k=20&c=bKnReuG0WKYu0xq8W5tMqn0atSpBKh4czzmeYn0n8LE="
-                            class="fade-in-image card-img" alt="...">
-                        <div class="card-img-overlay">
-                            <h5 class="card-title" style="color: black;">Breathing Exercise</h5>
-                            <p class="card-text" style="color: black;">This calming breathing technique for stress,
-                                anxiety and panic takes just a few minutes and can be done anywhere.
+    <h1 style="text-align: center; margin-bottom: 40px;">🧘‍♂️ Yoga Poses & Benefits</h1>
 
-                                You will get the most benefit if you do it regularly, as part of your daily routine.
+    <div class="button-group">
+        <button class="btnSmall" onclick="showInfo('sukhasana')">Sukhasana</button>
+        <button class="btnSmall" onclick="showInfo('vajrasana')">Vajrasana</button>
+        <button class="btnSmall" onclick="showInfo('bhujangasana')">Bhujangasana</button>
+        <button class="btnSmall" onclick="showInfo('surya')">Surya Namaskar</button>
+        <button class="btnSmall" onclick="showInfo('tadasana')">Tadasana</button>
+        <button class="btnSmall" onclick="showInfo('tadasana')">  Balasana</button>
+        <button class="btnSmall" onclick="showInfo('tadasana')">  Marjaryasana-Bitilasana</button>
+    </div>
 
-                                You can do it standing up, sitting in a chair that supports your back, or lying on a bed
-                                or yoga mat on the floor</p>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="bigcard2">
-                <div class="card text-bg-dark">
-                    <img src=" https://plus.unsplash.com/premium_photo-1679596990747-d32c550a8fc7?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHlvZ2F8ZW58MHx8MHx8fDA%3D"
-                        class="fade-in-image card-img" alt="...">
-                    <div class="card-img-overlay">
-                        <h5 class="card-title" style="color: black;">Vrikshasana</h5>
-                        <p class="card-text" style="color: black;">Vrikshasana is derived from the Sanskrit term
-
-                            which combines Vriksha and position Vriksha means Tree, and Asana means posture.
-
-                            Vrikshasan or the Tree pose is a lovely meditation which integrates our body, mind and
-                            breath. This implores the qualities of mercy, generosity, flexibility, tolerance, strength,
-                            endurance, balance and grace which helps an individual to achieve overall growth in his or
-                            her life.</p>
-
-                    </div>
-                </div>
-            </div>
-
+    <div class="card-container" id="infoCards">
+        <div class="card-ssmall" id="card1">
+            <h3>Benefits</h3>
+            <p></p>
+        </div>
+        <div class="card-ssmall" id="card2">
+            <h3>Best Time</h3>
+            <p></p>
+        </div>
+        <div class="card-ssmall" id="card3">
+            <h3>Duration</h3>
+            <p></p>
+        </div>
+        <div class="card-ssmall" id="card4">
+            <h3>Other Advantages</h3>
+            <p></p>
         </div>
     </div>
-    <!-- <div class="contact">
-        <h1 style="text-align: center;">Feedback</h1>
+
+
+
+       <!-- <h1 style="text-align: center;">Feedback</h1>
         <form class="form">
             <input type="text" placeholder="Enter your name" name='name' id="name">
             <input type="email" placeholder="Enter your Email address" id='email'>
@@ -498,10 +867,195 @@ bottom: 6px;
             <a href="#" class="fa fa-snapchat"></a>
         </div>
     </div> -->
-    <div class="footer" id="footer_section">
-        <h4>&copy; Copyright reserved</h4>
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" style="background-image: url('https://media.istockphoto.com/id/1036550412/photo/young-sporty-woman-in-half-lotus-pose-side-view.jpg?s=612x612&w=0&k=20&c=9arqVGDnFCHv8O3BcHWmqu7Wek5Jtsmo1z0G6v5yZQ4=');">
+            Sukhasana
+          </div>
+          <div class="swiper-slide" style="background-image: url('https://media.istockphoto.com/id/639190038/photo/young-woman-in-vajrasana-pose-home-interior-background-namaste.jpg?s=612x612&w=0&k=20&c=9eWlSl1yhfNWvawNIPic1AjFROpNi0B74J7SNaQMgLs=');">
+            Vajrasana
+          </div>
+          <div class="swiper-slide" style="background-image: url('https://media.istockphoto.com/id/1134841010/photo/young-woman-practicing-yoga-lying-in-cobra-pose-bhujangasana.jpg?s=612x612&w=0&k=20&c=DxJpmMn1B-_6se-OpqwpvfOI9yE3NOCWUVg855yeHzU=');">
+            Bhujangasana
+          </div>
+          <div class="swiper-slide" style="background-image: url('https://media.istockphoto.com/id/1313368569/photo/couple-practicing-yoga-at-home.jpg?s=612x612&w=0&k=20&c=nGL3yPcfZtggnzPNfx76oj_LUhTUb_mZo_fmqMpoA_g=');">
+            Surya Namaskar
+          </div>
+          <div class="swiper-slide" style="background-image: url('https://media.istockphoto.com/id/1071193980/photo/young-man-making-yoga-exercises-for-health-in-nature-lake-side.jpg?s=612x612&w=0&k=20&c=2PsN36RLOLTsjlaAmKk9pPbWh5QHeWBq_TANg2HopaM=');">
+            Tadasana
+          </div>
+          <div class="swiper-slide" style="background-image: url('https://media.istockphoto.com/id/637778500/photo/young-woman-in-balasana-pose-grey-studio-background.jpg?s=612x612&w=0&k=20&c=HxXh6VvY3P21nrbJt7VtxU_p8-nJNVh0BBwDS8CETPo=');">
+            Balasana
+          </div>
+          <div class="swiper-slide" style="background-image: url('https://media.istockphoto.com/id/647228174/photo/yoga-men-workout-on-black-mat.jpg?s=612x612&w=0&k=20&c=cthx9LYA0RIyRI-ve9EnFTkGwZfToUSS51NtSJxXCvs=');">
+            Marjaryasana-Bitilasana
+          </div>
+        </div>
+    
+        <!-- Arrows -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+       </div>
 
-    </div>
+       <section id="AboutUs" class="suffering-section">
+        <div class="heading">
+            <h1>Who we are <br><span>at MediMentors</span><br>?</h1>
+        </div>
+
+        <div class="card-wrapper">
+            <div class="card-suffering newCard" >
+                <div class="card-overlay newCard" style="background-color: white; ">
+                    <h2>Who we are ?</h2>
+                    <p style="text-align: center;"><strong>Medimentors</strong> is a personalized yoga suggestion platform designed to help people struggling with physical or mental health issues.
+                        <br><br>
+                        Our mission is to guide you with the right yoga postures, routines, and tips so you can build a healthy and peaceful lifestyle — all at your pace, all in one place.
+                      </p></p>
+                    
+                </div>
+            </div>
+
+            <div class="card-suffering newCard">
+                <div class="card-overlay newCard">
+                    <h2>What we do?</h2>
+                    <p> <ul style="list-style: none; text-align: left;">
+                        <li>✅ Personalized yoga pose suggestions</li>
+                        <li>✅ Guidance based on your current symptoms</li>
+                        <li>✅ Easy-to-follow pose details, benefits, and timings</li>
+                        <li>✅ Mental wellness & physical health tracking via yoga</li>
+                        <li>✅ Clean UI to explore and learn yoga the right way</li>
+                       
+                      </ul></p>
+                   
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://cdn.botpress.cloud/webchat/v3.2/inject.js" defer></script>
+    <script src="https://files.bpcontent.cloud/2025/07/23/17/20250723172114-JRL9OVCM.js" defer></script>
+    <footer class="modern-footer">
+        <div class="footer-content">
+      
+          <div class="footer-box brand">
+            <h2>MediMentors</h2>
+            <p>YOGA SE HOGA  🧘🏻</p>
+          </div>
+      
+          <div class="footer-box">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="#Home">Home</a></li>
+              <li><a href="#Yoga">Yoga</a></li>
+              <li><a href="#Yoga">Meditation</a></li>
+              <li><a href="#AboutUs">AboutUs</a></li>
+              
+            </ul>
+          </div>
+      
+          <div class="footer-box">
+            <h3>Contact</h3>
+            <p><i class="fas fa-phone-alt"></i> +91 9634924477</p>
+            <p><i class="fas fa-envelope"></i> MediMentors@gmai.com</p>
+            <p><i class="fas fa-map-marker-alt"></i> Meerut(UP), India</p>
+          </div>
+      
+          <div class="footer-box">
+            <h3>Follow Us</h3>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+      
+        </div>
+      
+        <div class="footer-bottom">
+          <p>&copy; Medimentors. All rights reserved.</p>
+          <p>&copy; Created and Developed By ~ Mohd Kaif</p>
+        </div>
+      </footer>
+      
+    
+      
+          
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+      const swiper = new Swiper('.mySwiper', {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        loop: true,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      });
+    </script>
+    <script>
+        const data = {
+    sukhasana: {
+    benefits: "Calms the mind, opens hips, and improves posture.",
+    time: "Morning or before meditation",
+    duration: "10-15 minutes Daily ",
+    others: "Good for inner peace and focus"
+  },
+  vajrasana: {
+    benefits: "Helps digestion, strengthens back & legs.",
+    time: "After meals or anytime",
+    duration: "5-15 minutes",
+    others: "Prevents acidity and enhances blood flow"
+  },
+  bhujangasana: {
+    benefits: "Stretches spine, relieves back pain, and tones abdomen.",
+    time: "Morning or post warm-up",
+    duration: "2-5 minutes",
+    others: "Improves flexibility and reduces fatigue"
+  },
+  surya: {
+    benefits: "Full-body workout, increases energy and flexibility.",
+    time: "Early morning",
+    duration: "15-30 minutes (12 rounds)",
+    others: "Improves digestion, mood, and blood circulation"
+  },
+  tadasana: {
+    benefits: "Improves posture and strengthens thighs and core.",
+    time: "Morning or mid-day stretch",
+    duration: "2-5 minutes",
+    others: "Increases height (in growing kids), balance, and body awareness"
+  },
+  balasana: {
+    benefits: "Relieves tension in back, shoulders, and chest; calms the brain.",
+    time: "Anytime you need to relax or cool down",
+    duration: "1-5 minutes",
+    others: "Excellent resting pose; reduces stress and fatigue"
+  },
+  "marjaryasana-bitilasana": {
+    benefits: "Improves spine flexibility, relieves back and neck tension.",
+    time: "Morning or before workout",
+    duration: "1-3 minutes (5-10 rounds)",
+    others: "Great warm-up for the spine and helps in coordination of breath"
+  }
+};
+
+        function showInfo(type) {
+            const info = data[type];
+            document.getElementById('card1').querySelector('p').textContent = info.benefits;
+            document.getElementById('card2').querySelector('p').textContent = info.time;
+            document.getElementById('card3').querySelector('p').textContent = info.duration;
+            document.getElementById('card4').querySelector('p').textContent = info.others;
+
+            const container = document.getElementById('infoCards');
+            container.style.display = 'grid';
+
+            // Re-apply animation
+            container.style.animation = 'none';
+            void container.offsetWidth;
+            container.style.animation = 'fadeIn 0.6s ease';
+        }
+    </script>
+
+
 
 </body>
 

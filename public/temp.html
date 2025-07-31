@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Yoga Pose Slider</title>
+
+  <!-- Swiper CSS -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #f0f0f0;
+      font-family: sans-serif;
+    }
+
+    .swiper {
+      width: 90%;
+      padding: 50px 0;
+      margin: auto;
+    }
+
+    .swiper-slide {
+      background-size: cover;
+      background-position: center;
+      border-radius: 20px;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      color: #4caf50;
+      font-weight: bold;
+    }
+
+    /* Optional: make arrows bigger */
+    .swiper-button-next::after,
+    .swiper-button-prev::after {
+      font-size: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide" style="background-image: url('https://yogaposes.io/wp-content/uploads/2020/06/Mountain-Pose.jpg');">
+        Mountain Pose
+      </div>
+      <div class="swiper-slide" style="background-image: url('https://www.yogajournal.com/wp-content/uploads/2021/10/DownwardDog_Stephen.jpg');">
+        Downward Dog
+      </div>
+      <div class="swiper-slide" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/1/13/Padmasana_Lotus_pose.jpg');">
+        Lotus Pose
+      </div>
+      <div class="swiper-slide" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/1/13/Padmasana_Lotus_pose.jpg');">
+        Lotus Pose
+      </div>
+    </div>
+
+    <!-- Navigation arrows -->
+    <div class="swiper-button-next">helo</div>
+    <div class="swiper-button-prev"></div>
+  </div>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script>
+    const swiper = new Swiper('.mySwiper', {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      loop: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
+</body>
+</html>

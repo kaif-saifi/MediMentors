@@ -9,16 +9,31 @@ const app = express();
 const session = require('express-session');
 
 app.use(session({
-    secret: 'mongodb://localhost:27017/', // Replace with a strong secret
+    // secret: 'mongodb://localhost:27017/',
+    secret: 'mongodb+srv://KaifSaifi:KaifClusterOne@cluster0.8mk2o.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0',
     resave: false,
     saveUninitialized: true,
-    cookie: { secure: false } // Use `true` if using HTTPS
+    cookie: { secure: false }
 }));
 
+
+function isAuthenticated(req, res, next) {
+    if (req.session.user) {
+        return next();
+    } else {
+        res.redirect('/login');
+    }
+}
 app.use(express.static(path.join(__dirname,'/public/')))
 app.use(express.static(path.join(__dirname, 'public')));
+
+// app.use(bodyParser.urlencoded({ extended: false }))
+// mongoose.connect('mongodb://localhost:27017/SignUp', {
+//     useNewUrlParser: true,
+//     useUnifiedTopology: true,
+// })
 app.use(bodyParser.urlencoded({ extended: false }))
-mongoose.connect('mongodb://localhost:27017/SignUp', {
+mongoose.connect('mongodb+srv://KaifSaifi:KaifClusterOne@cluster0.8mk2o.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0/SignUp', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 })
@@ -36,6 +51,9 @@ const userSchema = new mongoose.Schema({
     
 });
 const users = mongoose.model("data", userSchema)
+app.get('/profile', isAuthenticated, (req, res) => {
+    res.render('profile', { user: req.session.user });
+});
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '/public/Signup.html'))
     // res.sendFile(path.join(__dirname,'/public/images/MediMentors.jpg'))
@@ -74,6 +92,24 @@ app.get('/login', (req, res) => {
 
     console.log("Listning.....")
 })
+app.get('/Signup', (req, res) => {
+    res.sendFile(path.join(__dirname, '/public/Signup.html'))
+   
+    
+
+    
+})
+// app.post('/login', async (req, res) => {
+//     const { email, password } = req.body;
+//     const user = await User.findOne({ femail: email });
+
+//     if (user && user.fpassword === password) {
+//         req.session.user = user;
+//         res.json({ success: true, name: user.fname, email: user.femail });
+//     } else {
+//         res.json({ success: false, message: "Invalid credentials" });
+//     }
+// });
 // app.get("/home", isLoggedIn, function (req, res) {
 //     res.render("home");
 // });
@@ -110,6 +146,28 @@ app.get('/home', (req, res) => {
     }
     res.redirect('home', { user: req.session.user }); 
 });
+app.get('/start', (req, res) => {
+    res.sendFile(path.join(__dirname, '/public/Entries.html'))
+   
+
+   
+})
+app.get('/home', (req, res) => {
+    res.sendFile(path.join(__dirname, '/public/home.html'))
+   
+
+   
+})
+
+
+app.get('/logout', (req, res) => {
+    req.session.destroy((err) => {
+        if (err) {
+            console.log(err);
+        }
+        res.redirect('/');
+    });
+});
 app.listen(port,()=>{
-    console.log(`App is listnig at ${port}`)
+    console.log(`App is listnig at http://localhost:${port}/`)
 })

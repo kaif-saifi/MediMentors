@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yoga Intake Form</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #f4eff6;
+            margin: 0;
+            padding: 20px;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: #f9f9f9;
+            border-radius: 16px;
+            box-shadow: 0 8px 20px rgba(1, 1, 1, 0.8);
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 1.2rem;
+            font-size: 16px;
+            color: #333;
+        }
+
+        form label input,
+        form label select {
+            width: 100%;
+            padding: 10px 12px;
+            margin-top: 6px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            font-size: 15px;
+            transition: border-color 0.3s ease;
+        }
+
+        form label input:focus,
+        form label select:focus {
+            border-color: #7a5af8;
+            outline: none;
+            background: #fff;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 28px;
+            color: rgb(94, 0, 128);
+            margin-bottom: 2rem;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 10px;
+            
+        }
+
+        h2 {
+            margin-top: 40px;
+            margin-bottom: 10px;
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+        }
+
+        h2 .icon {
+            margin-right: 10px;
+        }
+
+        p.subtext {
+            margin-top: 0;
+            color: #666;
+            font-size: 14px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px 30px;
+            margin-top: 10px;
+        }
+
+        label {
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+        }
+
+        input[type="checkbox"] {
+            margin-right: 10px;
+            width: 18px;
+            height: 18px;
+        }
+
+        .submit-btn {
+            margin-top: 30px;
+            padding: 12px 25px;
+            font-size: 16px;
+            background: #64019e;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .submit-btn:hover {
+            background: #7701bb;
+        }
+
+        .section-divider {
+            height: 1px;
+            background-color: #eee;
+            margin: 40px 0 20px 0;
+        }
+        a{
+            color: Green;
+            text-decoration: none;
+            font-size: 25px;
+        }
+        a:hover{
+           color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <a href="/home">← Back to Home</a>
+        <h1>Your Wellness Journey Starts Here</h1>
+        <form id="yogaForm">
+            <label>Full Name <input id="name" type="text" name="name" required></label>
+            <label>Age <input id="age" type="number" name="age" required></label>
+            <label>Gender
+                <select name="gender" required>
+                    <option value="">Select</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+            </label>
+            <label>Fitness Level
+                <select name="fitnessLevel" id="level">
+                    <option value="Beginner">Beginner</option>
+                    <option value="Intermediate">Intermediate</option>
+                    <option value="Advanced">Advanced</option>
+                </select>
+            </label>
+
+            <label>
+                <h2><span class="icon">🧘‍♀️</span> Physical Wellness</h2>
+                <p class="subtext">Select any physical issues you are experiencing (optional)</p>
+                <select name="fitnessLevel" id="physical">
+                    <option value="Muscle Tension">Muscle Tension</option>
+                    <option value="Flexibility Issues">Flexibility Issues</option>
+                    <option value="Balance Problems">Balance Problems</option>
+                    <option value="Chronic Fatigue">Chronic Fatigue</option>
+                </select>
+            </label>
+            <label>
+                <h2><span class="icon">🧠</span> Mental Wellness</h2>
+                <p class="subtext">Select any mental wellness areas you'd like to focus on (optional)</p>
+                <select name="fitnessLevel" id="mental">
+                    <option value="Stress">Stress</option>
+                    <option value="Anxiety">Anxiety</option>
+                    <option value="Depression">Depression</option>
+                    <option value="Sleep Issues">Sleep Issues</option>
+                    <option value="Low Energy">Low Energy</option>
+                    <option value="Focus Problems">Focus Problems</option>
+                    <option value="Mood Swings">Mood Swings</option>
+                    <option value=" Burnout"> Burnout</option>
+        
+                </select>
+            </label>
+            <label>
+                <h2><span class="icon">🎯</span> Your Goals</h2>
+    <p class="subtext">What would you like to achieve through yoga? (optional)</p>
+                <select name="fitnessLevel" id="goals">
+                    <option value="Stress Relief">Stress Relief</option>
+                    <option value="Flexibility">Flexibility</option>
+                    <option value="Strength Building">Strength Building</option>
+                    <option value="Better Sleep">Better Sleep</option>
+                    <option value="Pain Management">Pain Management</option>
+                    <option value="Mental Clarity">Mental Clarity</option>
+                    <option value="Focus">Focus</option>
+                
+        
+                </select>
+            </label>
+            <button class="submit-btn" onclick="handleSubmit();return false;">Submit</button>
+    </div>
+
+   
+
+   
+
+    
+    </div>
+
+    <script>
+        function handleSubmit() {
+            
+            const name = document.getElementById('name').value
+            const age = document.getElementById('age').value
+            const level = document.getElementById('level').value
+            const mental=document.getElementById('mental').value
+            const physical=document.getElementById('physical').value
+            const goals=document.getElementById('goals').value
+           
+
+            //   console.log("Submitted Data:", data);
+            //   alert("Data submitted! Check console for JSON.");
+            window.location.href = `result.html?name=${encodeURIComponent(name)}&age=${encodeURIComponent(age)}&level=${encodeURIComponent(level)}&physical=${encodeURIComponent(physical)}&mental=${encodeURIComponent(mental)}&goals=${encodeURIComponent(goals)}`;
+        }
+    </script>
+</body>
+
+</html>

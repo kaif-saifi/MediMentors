@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .welcome-section {
+  padding: 2rem;
+  /* max-width: 1000px; */
+  /* margin: auto; */
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.welcome-box {
+  background: linear-gradient(90deg, #16a085, #2980b9);
+  background: linear-gradient(90deg, #9c5de8, #5bb6c8);
+  color: white;
+  padding: 2rem;
+  border-radius: 20px;
+  margin-bottom: 1.5rem;
+}
+
+.back-link {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.welcome-box h2 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.recommendations {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1.5rem;
+  font-size: 15px;
+}
+
+.profile-summary {
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 2rem 2rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  box-shadow: 0 0 10px rgba(1, 9, 5, 0.4);
+  background: linear-gradient(90deg, #ebeaee, #f3f3f3);
+}
+
+.profile-summary h3 {
+  margin-bottom: 1rem;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  font-size: 16px;
+}
+.yoga-cards-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  justify-content: center
+}
+
+.yoga-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 16px;
+  width: 300px;
+  position: relative;
+  transition: transform 0.3s ease;
+  border: 1px solid #7b1bc2;
+ 
+}
+
+.yoga-card:hover {
+  transform: translateY(-5px);
+}
+
+.yoga-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+.tag {
+  background-color: #ccf3dd;
+  color: #087f5b;
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 12px;
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 18px;
+  margin: 10px 0 6px;
+}
+
+.duration {
+  font-size: 14px;
+  color: #555;
+  margin: 4px 0;
+}
+
+.benefits {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 6px;
+}
+
+.benefits span {
+  background: #e7f5ff;
+  color: #1c7ed6;
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 8px;
+}
+
+.tips-card {
+  background: #fdf2f8;
+  border-radius: 16px;
+  padding: 24px;
+  margin-top: 40px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  margin: 31px 43px 91px 48px;
+  padding: 20px 158px;
+  font-family: 'Segoe UI', sans-serif;
+  border: 1px solid #fa8181;
+}
+
+.tips-card h2 {
+  font-size: 22px;
+  margin-bottom: 16px;
+  color: #111;
+}
+
+.tips-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.tips-grid h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.tips-grid ul {
+  padding-left: 20px;
+}
+
+.tips-grid li {
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #555;
+  list-style-type: disc;
+}
+h2{
+    text-align: center;
+    font-size: 36px;
+}
+a:hover{
+  color: black;
+}
+</style>
+<body>
+    <section class="welcome-section">
+        <div class="welcome-box">
+          <a href="Entries.html" class="back-link" >← Back to Form</a>
+          <h2  style="display: flex;">Welcome, &nbsp;  <span id="User-name" style="color: #210150;"></span> </h2>
+          <p style="display: flex; flex-direction: row;">Based on your complete- <span id="l1" ></span> &nbsp; level and focus on &nbsp; <span id="d1" style="color: black;"></span>, here's your personalized yoga sequence.</p>
+          <div class="recommendations">
+            <span id="recommend">📅 Recommended: 3–4 times per week</span>
+            <span id="durationBigcard">⏱️ Session Duration: 20–30 minutes</span>
+          </div>
+        </div>
+      
+        <div class="profile-summary">
+          <h3 style="color: #210150;">Your Profile Summary</h3>
+          <div class="summary-grid">
+            <div id="one"><strong>Experience:</strong><br>Complete Beginner</div>
+            <div id="two"><strong>Fitness Level:</strong><br>Beginner</div>
+            <div id="three"><strong>Primary Goals:</strong><br>Strength Building</div>
+            <div id="four"><strong>Focus Areas:</strong><br>Back Pain, Stress</div>
+          </div>
+        </div>
+      </section>
+      <h2 style="color:#7b1bc2;  font-family: 'Segoe UI', sans-serif;">Your Personalized Yoga Sequence</h2>
+<div class="yoga-cards-container">
+  <div class="yoga-card">
+    <img id="img1" src="MediMentors.jpg" alt="Child's Pose">
+    <span class="tag" id="tag3">Beginner</span>
+    <h3 id="Card_one_pose_name">Child's Pose (Balasana)</h3>
+    <p id="Card_one_pose_desc">A gentle resting pose that helps calm the mind and stretch the lower back.</p>
+    <p id="Card_one_duration">⏱️ 1–3 minutes</p>
+    <p><strong>Benefits:</strong></p>
+    <div class="benefits" id="benefit-one">
+      <span>Stress Relief</span>
+      <span>Lower Back Stretch</span>
+      <span>Calming</span>
+    </div>
+  </div>
+
+  <div class="yoga-card">
+    <img id="img2" src="" alt="Corpse Pose">
+    <span class="tag" id="tag1" >Beginner</span>
+    <h3 id="Card_two_pose_name">Corpse Pose (Savasana)</h3>
+    <p id="Card_two_pose_desc">A deep relaxation pose that allows the body and mind to integrate the practice.</p>
+    <p id="Card_two_duration" class="duration">⏱️ 5–10 minutes</p>
+    <p><strong>Benefits:</strong></p>
+    <div class="benefits" id="benefit-two">
+      <span>Deep Relaxation</span>
+      <span>Stress Relief</span>
+      <span>Integration</span>
+    </div>
+  </div>
+
+  <div class="yoga-card">
+    <img id="img3" src="MediMentors.jpg" alt="Cat-Cow Pose">
+    <span class="tag"  id="tag2">Beginner</span>
+    <h3 id="Card_three_pose_name">Cat-Cow Pose (Marjaryasana-Bitilasana)</h3>
+    <p id="Card_three_pose_desc" >A gentle flow between two poses that warms up and stretches the spine.</p>
+    <p class="duration">⏱️ 1–2 minutes</p>
+    <p><strong>Benefits:</strong></p>
+    <div class="benefits" id="benefit-three">
+      <span>Spinal Mobility</span>
+      <span>Back Pain Relief</span>
+      <span>Core Strength</span>
+    </div>
+  </div>
+</div>
+
+<div class="tips-card">
+    <h2>Personalized Tips for You</h2>
+    <div class="tips-grid">
+      <div>
+        <h3>Getting Started:</h3>
+        <ul>
+          <li>Start with 2–3 poses and gradually add more</li>
+          <li>Hold each pose for the recommended duration</li>
+          <li>Focus on your breathing throughout the practice</li>
+          <li>Listen to your body and rest when needed</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Safety Reminders:</h3>
+        <ul>
+          <li>Never force yourself into a pose</li>
+          <li>Modify poses as needed for your comfort</li>
+          <li>Consult a healthcare provider if you have concerns</li>
+          <li>Practice on a non-slip yoga mat</li>
+        </ul>
+      </div>
+    </div>
+    <script src="https://cdn.botpress.cloud/webchat/v3.2/inject.js" defer></script>
+    <script src="https://files.bpcontent.cloud/2025/07/23/17/20250723172114-JRL9OVCM.js" defer></script>
+    <dev id="output"></dev>
+  </div>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+  const name = params.get("name");
+  const age = params.get("age");
+  const level=params.get("level")
+  const mental=params.get('mental')
+  const physical=params.get('physical')
+  const goals=params.get('goals')
+  //level
+  if(level=="Beginner"){
+    document.getElementById('recommend').innerHTML=`📅 Recommended: 3–4 times per week`
+    document.getElementById('durationBigcard').innerHTML=`⏱️ 15–20 minutes`
+    
+   
+    
+  }
+  else if(level=="Intermediate"){
+    document.getElementById('recommend').innerHTML=`📅 Recommended: 4-5 times per week`
+    document.getElementById('durationBigcard').innerHTML=`⏱️ 30–40 minutes`
+    
+  }
+  else{
+    document.getElementById('recommend').innerHTML=`📅 Recommended: 5-6 times per week`
+    document.getElementById('durationBigcard').innerHTML=`⏱️ 50–60 minutes`
+    
+  }
+  //Profile
+  document.getElementById('User-name').innerHTML=`${name}`
+  document.getElementById('one').innerHTML=`<strong>Experience:</strong><br>${level}`
+  document.getElementById('two').innerHTML=`<strong>Fitness Level:</strong><br>${level}`
+  document.getElementById('three').innerHTML=`<strong>Primary Goals</strong><br>${goals}`
+  document.getElementById('four').innerHTML=`<strong>Focus Areas:</strong><br>${physical,mental}`
+  document.getElementById('tag1').textContent=`${level}`
+  document.getElementById('tag2').textContent=`${level}`
+  document.getElementById('tag3').textContent=`${level}`
+  document.getElementById('d1').textContent=`${physical} , ${mental} `
+  document.getElementById('l1').textContent=`${level}  `
+
+  //recommendation
+  const YogaPose = [
+      { index:0,
+        name: "Child's Pose (Balasana)",
+        image: "https://media.istockphoto.com/id/542715024/photo/pregnant-young-woman-doing-prenatal-child-yoga-pose-balasana.jpg?s=612x612&w=0&k=20&c=-UI9AuOGvipPNPHTdUjmZyUINw9tq5Kid8CCGe_klHw=",
+        duration: "1-3 minutes",
+        difficulty: "Beginner",
+        benefits: ["Stress Relief", "Lower Back Stretch", "Calming"],
+        description: "A gentle resting pose that helps calm the mind and stretch the lower back.",
+        category: "Restorative"
+      },
+      { index:1,
+        name: "Mountain Pose (Tadasana)",
+        image: "https://media.istockphoto.com/id/1067864452/photo/group-of-young-women-practicing-yoga-lesson-doing-mountain-exercise.jpg?s=612x612&w=0&k=20&c=JLlMQqqfUCFQcQKkz_5WMaFnndyVMR7QiuZW30t1Jco=",
+        duration: "30 seconds - 1 minute",
+        difficulty: "Beginner",
+        benefits: ["Posture Improvement", "Focus", "Foundation"],
+        description: "The foundation of all standing poses, promoting good posture and body awareness.",
+        category: "Standing"
+      },
+      {index:2,
+        name: "Cat-Cow Pose (Marjaryasana-Bitilasana)",
+        image: "https://media.istockphoto.com/id/175178133/photo/yoga-series-cat-cow.jpg?s=612x612&w=0&k=20&c=unH9LpR7HoDgW8KQgN8qAJMvp1nYdwI-fwr791n2ZKQ=",
+        duration: "1-2 minutes",
+        difficulty: "Beginner",
+        benefits: ["Spinal Mobility", "Back Pain Relief", "Core Strength"],
+        description: "A gentle flow between two poses that warms up and stretches the spine.",
+        category: "Flow"
+      },
+      {  index:3,
+        name: "Downward Facing Dog (Adho Mukha Svanasana)",
+        image: "https://media.istockphoto.com/id/1371042823/photo/young-caucasian-man-practicing-yoga-on-a-mat-outdoors-at-the-park-in-downward-facing-dog-pose.jpg?s=612x612&w=0&k=20&c=kTh2q4It9SklzB6wWzGv_PlRJDoKSEf2Tm_I83HbWUQ=",
+        duration: "30 seconds - 1 minute",
+        difficulty: "Beginner to Intermediate",
+        benefits: ["Full Body Stretch", "Strength Building", "Energy Boost"],
+        description: "An energizing pose that stretches and strengthens the entire body.",
+        category: "Inversion"
+      },
+      { index:4,
+        name: "Warrior II (Virabhadrasana II)",
+        image: "https://media.istockphoto.com/id/825186440/photo/woman-demonstrates-the-warrior-ii-yoga-pose.jpg?s=612x612&w=0&k=20&c=vMfopaLoWqfxv7Coyu2ow6x_UOa5Gh8jD06jVyWD9OI=",
+        duration: "30 seconds - 1 minute each side",
+        difficulty: "Intermediate",
+        benefits: ["Leg Strength", "Hip Opening", "Confidence"],
+        description: "A powerful standing pose that builds strength and stability.",
+        category: "Standing"
+      },
+      { index:5,
+        name: "Corpse Pose (Savasana)",
+        image: "https://media.istockphoto.com/id/637024764/photo/top-view-of-shavasana-yoga-posture.jpg?s=612x612&w=0&k=20&c=Zcao4uQ7UEluCwdYg9jbTkc1b6KO_mrwLQZtK0-cjZc=",
+        duration: "5-10 minutes",
+        difficulty: "Beginner",
+        benefits: ["Deep Relaxation", "Stress Relief", "Integration"],
+        description: "A deep relaxation pose that allows the body and mind to integrate the practice.",
+        category: "Restorative"
+      },
+      { index:6,
+        name: "Tree Pose (Vrikshasana)",
+        image: "https://media.istockphoto.com/id/539294249/photo/he-lives-a-balanced-lifestyle.jpg?s=612x612&w=0&k=20&c=XiNe-9ZdXLq7sZNeTu62riBQ1pIRBLThUtnS415lUqs=",
+        duration: "30 seconds - 1 minute each side",
+        difficulty: "Beginner to Intermediate",
+        benefits: ["Balance", "Focus", "Leg Strength"],
+        description: "A balancing pose that improves focus and strengthens the legs.",
+        category: "Balance"
+      },
+      { index:7,
+        name: "Seated Forward Bend (Paschimottanasana)",
+        image: "https://media.istockphoto.com/id/1076946886/photo/young-sporty-attractive-woman-practicing-yoga-doing-paschimottanasana-exercise.jpg?s=612x612&w=0&k=20&c=BGZuN-Wr9W60RCqKYTEteoOUNWYDKpMe99xX1Jta4mY=",
+        duration: "1-3 minutes",
+        difficulty: "Intermediate",
+        benefits: ["Hamstring Stretch", "Calming", "Digestive Aid"],
+        description: "A seated fold that deeply stretches the back body and calms the nervous system.",
+        category: "Seated"
+      },{ 
+  index: 8,
+  name: "Mindfulness Meditation",
+  image: "https://media.istockphoto.com/id/1127267810/photo/young-confident-woman-practicing-mindfulness-meditation-at-home-she-is-sitting-with-crossed.jpg?s=612x612&w=0&k=20&c=nID178zT2n11lE6D2k281ipRqTzI_3GipNCVdcqY5hQ=",
+  duration: "5-20 minutes",
+  difficulty: "Beginner",
+  benefits: ["Mental Clarity", "Stress Reduction", "Emotional Balance"],
+  description: "A seated meditation practice focusing on breath and present moment awareness to calm the mind.",
+  category: "Meditation"
+},{ 
+  index: 9,
+  name: "Loving-Kindness Meditation (Metta)",
+  image: "https://media.istockphoto.com/id/1213746673/photo/beautiful-asian-woman-sitting-barefoot-on-the-floor-at-home-smiling-with-hands-on-chest-with.jpg?s=612x612&w=0&k=20&c=cb2Q7biqOfVKFW3Eb6TwL0CR4g_0lTXQz_ZZo03ADkI=",
+  duration: "10-15 minutes",
+  difficulty: "Beginner",
+  benefits: ["Emotional Healing", "Compassion", "Reduced Negative Emotions"],
+  description: "A meditation technique that cultivates compassion and positive emotions by silently repeating phrases of goodwill toward oneself and others.",
+  category: "Meditation"
+}
+
+]
+
+// document.getElementById('img1').setAttribute("src",`${YogaPose[0].image}`)
+
+
+if(physical=="Muscle Tension"||physical=="Flexibility Issues"){
+    document.getElementById('img1').setAttribute("src",`${YogaPose[0].image}`)
+    document.getElementById('Card_one_pose_name').innerHTML=`${YogaPose[0].name}`
+    document.getElementById('Card_one_pose_desc').textContent = `${YogaPose[0].description}`;
+    document.getElementById('benefit-one').innerHTML=`<span>${YogaPose[0].benefits[0]}</span>
+      <span>${YogaPose[0].benefits[1]}</span>
+      <span>${YogaPose[0].benefits[2]}</span>`
+      // document.getElementById('Card_one_pose_duration').textContent = `${YogaPose[0].duration}`;
+}
+else if(physical=="Balance Problems"||physical=="Chronic Fatigue"){
+    document.getElementById('img1').setAttribute("src",`${YogaPose[6].image}`)
+    document.getElementById('Card_one_pose_name').innerHTML=`${YogaPose[6].name}`
+    document.getElementById('Card_one_pose_desc').textContent = `${YogaPose[6].description}`;
+    document.getElementById('benefit-one').innerHTML=`<span>${YogaPose[6].benefits[0]}</span>
+      <span>${YogaPose[6].benefits[1]}</span>
+      <span>${YogaPose[6].benefits[2]}</span>`
+      // document.getElementById('Card_one_pose_duration').textContent =`${YogaPose[0].duration}`;
+
+}
+if(mental === "Stress" || mental === "Anxiety"){
+    document.getElementById('img2').setAttribute("src", `${YogaPose[5].image}`);
+    document.getElementById('Card_two_pose_name').innerHTML = `${YogaPose[5].name}`;
+    document.getElementById('Card_two_pose_desc').textContent = `${YogaPose[5].description}`;
+    document.getElementById('benefit-two').innerHTML = `
+        <span>${YogaPose[5].benefits[0]}</span>
+        <span>${YogaPose[5].benefits[1]}</span>
+        <span>${YogaPose[5].benefits[2]}</span>`;
+}
+else if(mental === "Sleep Issues" || mental === "Depression"){
+  document.getElementById('img2').setAttribute("src", `${YogaPose[0].image}`);
+    document.getElementById('Card_two_pose_name').innerHTML = `${YogaPose[0].name}`;
+    document.getElementById('Card_two_pose_desc').textContent = `${YogaPose[0].description}`;
+    document.getElementById('benefit-two').innerHTML = `
+        <span>${YogaPose[0].benefits[0]}</span>
+        <span>${YogaPose[0].benefits[1]}</span>
+        <span>${YogaPose[0].benefits[2]}</span>`;
+}
+else if(mental === "Low Energy" || mental === "Focus Problems"){
+  document.getElementById('img2').setAttribute("src", `${YogaPose[8].image}`);
+    document.getElementById('Card_two_pose_name').innerHTML = `${YogaPose[8].name}`;
+    document.getElementById('Card_two_pose_desc').textContent = `${YogaPose[8].description}`;
+    document.getElementById('benefit-two').innerHTML = `
+        <span>${YogaPose[8].benefits[0]}</span>
+        <span>${YogaPose[8].benefits[1]}</span>
+        <span>${YogaPose[8].benefits[2]}</span>`;
+}
+else if(mental === "Mood Swings" || mental === "Burnout"){
+  document.getElementById('img2').setAttribute("src", `${YogaPose[3].image}`);
+    document.getElementById('Card_two_pose_name').innerHTML = `${YogaPose[3].name}`;
+    document.getElementById('Card_two_pose_desc').textContent = `${YogaPose[3].description}`;
+    document.getElementById('benefit-two').innerHTML = `
+        <span>${YogaPose[3].benefits[0]}</span>
+        <span>${YogaPose[3].benefits[1]}</span>
+        <span>${YogaPose[3].benefits[2]}</span>`;
+}
+if(goals === "Stress Relief" || goals === "Mental Clarity"){
+  document.getElementById('img3').setAttribute("src", `${YogaPose[9].image}`);
+    document.getElementById('Card_three_pose_name').innerHTML = `${YogaPose[9].name}`;
+    document.getElementById('Card_three_pose_desc').textContent = `${YogaPose[9].description}`;
+    document.getElementById('benefit-three').innerHTML = `
+        <span>${YogaPose[9].benefits[0]}</span>
+        <span>${YogaPose[9].benefits[1]}</span>
+        <span>${YogaPose[9].benefits[2]}</span>`;
+}
+else if(goals === "Flexibility" || goals === "Strength Building"|| goals === "Pain Management"){
+  document.getElementById('img3').setAttribute("src", `${YogaPose[2].image}`);
+    document.getElementById('Card_three_pose_name').innerHTML = `${YogaPose[2].name}`;
+    document.getElementById('Card_three_pose_desc').textContent = `${YogaPose[2].description}`;
+    document.getElementById('benefit-three').innerHTML = `
+        <span>${YogaPose[2].benefits[0]}</span>
+        <span>${YogaPose[2].benefits[1]}</span>
+        <span>${YogaPose[2].benefits[2]}</span>`;
+}
+else if(goals === "Better Sleep" || goals === "Focus"){
+  document.getElementById('img3').setAttribute("src", `${YogaPose[7].image}`);
+    document.getElementById('Card_three_pose_name').innerHTML = `${YogaPose[7].name}`;
+    document.getElementById('Card_three_pose_desc').textContent = `${YogaPose[7].description}`;
+    document.getElementById('benefit-three').innerHTML = `
+        <span>${YogaPose[7].benefits[0]}</span>
+        <span>${YogaPose[7].benefits[1]}</span>
+        <span>${YogaPose[7].benefits[2]}</span>`;
+}
+  // Display the data
+  // document.getElementById("output").textContent = `Name: ${name}, Age: ${age}`;
+  </script>
+</body>
+</html>

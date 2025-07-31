@@ -6,6 +6,15 @@
     <title>Medimentors</title>
 </head>
 <style>
+    body{
+        background-image: url('https://images.unsplash.com/photo-1492681290082-e932832941e6?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGhvcGV8ZW58MHx8MHx8fDA%3D');
+        background-image: url('https://media.istockphoto.com/id/1366192831/photo/butterflies-flying-from-an-open-hand-freedom-concept-the-butterflies-released-from-the-hand.jpg?s=1024x1024&w=is&k=20&c=68uXhvbWExt_L7NvjQL1bDmfM0hyCWebMQjrKYCIbwY=');
+        background-image: url('https://media.istockphoto.com/id/2162272168/photo/purple-sunrise-sky-tropical-tree-field-in-sunny-morning-silhouette-tree-pink-purple-dawn-sky.jpg?s=612x612&w=0&k=20&c=ks_R7QpsJyccXp8y3zYEsyxJkf5tu6cW3wtqcSRonv4=');
+        background-image: url('https://media.istockphoto.com/id/879294130/photo/butterflies-in-flight-against-a-background-of-wild-nature-in-pink-tones-artistic-image-soft.jpg?s=612x612&w=0&k=20&c=Hvulx_h3kgYpBqjn3fHE9TFyZYmFBrWb3SKo8ITL4UI=');
+        background-repeat: no-repeat;
+        background-size: 100% 110%;
+       
+    }
     .conatiner{
         padding: 50px;
         display: flex;
@@ -14,7 +23,7 @@
         flex-direction:column ;
         height: auto;
         width: 500px;
-        border: 2px solid black;
+       
         border-radius: 20px;
         font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         font-size: 20px;
@@ -30,24 +39,30 @@
         width: 300px;
     }
     input{
-        height: 30px;
-        width: 250px;
-        margin: 10px;
-        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        font-size: 15px;
-        text-align: center;
+        height: 39px;
+    width: 328px;
+    margin: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+    text-align: center;
+    border-radius: 10px;
+    border: 1px solid black
     }
     button{
         height: 60px;
         width: 140px;
         border-radius: 10px;
-        background-color: rgb(196 81 228);
-        border:1px solid rgb(126, 31, 152);
+        background-color: rgb(138, 16, 225);
+        border:1px solid rgb(169, 8, 213);
         color: azure;
         font-size: 20px;
         font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
     }
+    button:hover{
+        background-color: rgb(152, 52, 224);
+    }
+    
 </style>
 <body>
     <div class="conatiner">
@@ -65,9 +80,9 @@
             <input type="text" name="fname" id="fname" placeholder="Enter your name ">
             <input type="email" name="femail" id="email" placeholder="Enter your email">
             <input type="password" name="fpassword" id="password" placeholder="Enter password">
-            <p> --Continue with -- </p>
-            <p>Google  -or- Facebook</p>
-            <p>Already have an account  ? <a href="/public/login.html">Login</a></p>
+           
+            
+            <p>Already have an account  ? <a href="/login">Login</a></p>
             <button id="Sumbit"> Sign up </button>
         </form>
     </div>
