@@ -10,7 +10,8 @@ const session = require('express-session');
 
 app.use(session({
     // secret: 'mongodb://localhost:27017/',
-    secret: 'mongodb+srv://KaifSaifi:KaifClusterOne@cluster0.8mk2o.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0',
+    // secret: 'mongodb+srv://KaifSaifi:KaifClusterOne@cluster0.8mk2o.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0',
+    secret:process.env.MONGO_URI,
     resave: false,
     saveUninitialized: true,
     cookie: { secure: false }
@@ -32,8 +33,13 @@ app.use(express.static(path.join(__dirname, 'public')));
 //     useNewUrlParser: true,
 //     useUnifiedTopology: true,
 // })
+// app.use(bodyParser.urlencoded({ extended: false }))
+// mongoose.connect('mongodb+srv://KaifSaifi:KaifClusterOne@cluster0.8mk2o.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0/SignUp', {
+//     useNewUrlParser: true,
+//     useUnifiedTopology: true,
+// })
 app.use(bodyParser.urlencoded({ extended: false }))
-mongoose.connect('mongodb+srv://KaifSaifi:KaifClusterOne@cluster0.8mk2o.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0/SignUp', {
+mongoose.connect(process.env.MONGO_URI2, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 })
