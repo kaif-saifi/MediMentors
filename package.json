@@ -25,6 +25,9 @@
     "type": "git",
     "url": "git+https://github.com/kaif-saifi/MediMentors.git"
   },
+  "engines": {
+    "node": "20.x"
+  },
   "type": "commonjs",
   "bugs": {
     "url": "https://github.com/kaif-saifi/MediMentors/issues"
