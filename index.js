@@ -15,7 +15,7 @@ app.use(session({
     secret:process.env.MONGO_URI,
     resave: false,
     saveUninitialized: true,
-    cookie: { secure: false }
+    cookie: { secure: false}
 }));
 
 
