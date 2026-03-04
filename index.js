@@ -19,13 +19,21 @@ app.use(session({
 }));
 
 
+// function isAuthenticated(req, res, next) {
+//     if (req.session.user) {
+//         return next();
+//     } else {
+//         res.redirect('/login');
+//     }
+// }
 function isAuthenticated(req, res, next) {
     if (req.session.user) {
         return next();
     } else {
-        res.redirect('/login');
+        res.redirect('/home'); //changed 1
     }
 }
+
 app.use(express.static(path.join(__dirname,'/public/')))
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -62,12 +70,19 @@ const users = mongoose.model("data", userSchema)
 app.get('/profile', isAuthenticated, (req, res) => {
     res.render('profile', { user: req.session.user });
 });
+// app.get('/', (req, res) => {
+//     res.sendFile(path.join(__dirname, '/public/Signup.html'))
+//     // res.sendFile(path.join(__dirname,'/public/images/MediMentors.jpg'))
+
+//     console.log("Listning.....")
+// })
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '/public/Signup.html'))
+    res.sendFile(path.join(__dirname, '/public/home.html')) //changed 2
     // res.sendFile(path.join(__dirname,'/public/images/MediMentors.jpg'))
 
     console.log("Listning.....")
 })
+
 
 
 
@@ -96,6 +111,12 @@ app.post('/submit', async (req, res) => {
 
 app.get('/login', (req, res) => {
     res.sendFile(path.join(__dirname, '/public/login.html'))
+   
+
+    console.log("Listning.....")
+})
+app.get('/home', (req, res) => {
+    res.sendFile(path.join(__dirname, '/public/home.html'))
    
 
     console.log("Listning.....")
@@ -147,13 +168,13 @@ if(user){
       }
 })
 // Home page route
-app.get('/home', (req, res) => {
-    res.sendFile(path.join(__dirname, '/public/home.html'));
-    if (!req.session.user) {
-        return res.redirect('/login'); // Redirect to login if not logged in
-    }
-    res.redirect('home', { user: req.session.user }); 
-});
+// app.get('/home', (req, res) => {
+//     res.sendFile(path.join(__dirname, '/public/home.html'));
+//     if (!req.session.user) {
+//         return res.redirect('/login'); // Redirect to login if not logged in
+//     }
+//     res.redirect('home', { user: req.session.user }); 
+// });
 app.get('/start', (req, res) => {
     res.sendFile(path.join(__dirname, '/public/Entries.html'))
    
